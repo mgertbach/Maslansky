@@ -1,0 +1,67 @@
+/* FONTS */
+@font-face {
+font-family: Graphik-Black;
+src: url(fonts/Graphik-Black.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-BlackItalic;
+src: url(fonts/Graphik-BlackItalic.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-Bold;
+src: url(fonts/Graphik-Bold.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-BoldItalic;
+src: url(fonts/Graphik-BoldItalic.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-ExtraLight;
+src: url(fonts/Graphik-ExtraLight.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-ExtraLightItalic;
+src: url(fonts/Graphik-ExtraLightItalic.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-Light;
+src: url(fonts/Graphik-Light.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-LightItalic;
+src: url(fonts/Graphik-LightItalic.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-Medium;
+src: url(fonts/Graphik-Medium.otf);
+font-weight: normal;
+}
+@font-face {
+font-family: Graphik-MediumItalic;
+src: url(fonts/Graphik-MediumItalic.otf);
+font-weight: normal;
+}
+
+.mas-graphik-black { font-family: "Graphik-Black",sans-serif; }
+.mas-graphik-blackitalic { font-family: "Graphik-BlackItalic",sans-serif; }
+.mas-graphik-bold { font-family: "Graphik-Bold",sans-serif; }
+.mas-graphik-bolditalic { font-family: "Graphik-BoldItalic",sans-serif; }
+.mas-graphik-extralight { font-family: "Graphik-ExtraLightItalic",sans-serif; }
+.mas-graphik-extralightitalic { font-family: "Graphik-ExtraLightItalic",sans-serif; }
+.mas-graphik-light { font-family: "Graphik-Light",sans-serif; }
+.mas-graphik-lightitalic { font-family: "Graphik-LightItalic",sans-serif; }
+.mas-graphik-medium { font-family: "Graphik-Medium",sans-serif; }
+.mas-graphik-mediumitalic { font-family: "Graphik-MediumItalic",sans-serif; }
+
+.type_xl {}
+.type_lg {}
+.type_md {}
+.type_sm {font-size: 1.2rem;}
