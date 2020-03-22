@@ -183,6 +183,10 @@
 						<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'mas' ); ?>"><?php esc_html_e( 'Skip to content', 'mas' ); ?></a></div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 					</div>
+					<div id="nav-secondary" class="row">
+						<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container_class' => 'megamenu-secondary-nav col grid_6_of_12' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'social', 'container_class' => 'menu-social-links-menu-container col grid_6_of_12' ) ); ?>
+					</div>
 				</nav> <!-- /.site-navigation.main-navigation -->
 			</div> <!-- /.col.grid_7_of_12 -->
 		</header> <!-- /#masthead.site-header.row -->

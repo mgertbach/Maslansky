@@ -56,17 +56,6 @@
 								dynamic_sidebar('sidebar-footer1b');
 							}
 						?>
-						<script>
-							if (document.querySelector("#footercontainer .site-footer .menu-social-links-menu-container")) {
-								var links = document.querySelectorAll("#footercontainer .site-footer .menu-social-links-menu-container a");
-								for (var l = 0; l < links.length; l++) {
-									var addClass = links[l].getAttribute("title").split(" ");
-									for (var c = 0; c < addClass.length; c++) {
-										links[l].classList.add(addClass[c]);
-									}
-								}
-							}
-						</script>
 					</div>
 					<div class="footer-col col grid_6_of_12">
 						<?php
@@ -122,7 +111,18 @@
 				//} ?>
 
 			<?php //} ?>
-
+			<!-- run script to convert social links to icons -->
+			<script>
+				if (document.querySelectorAll(".menu-social-links-menu-container a")) {
+					var links = document.querySelectorAll(".menu-social-links-menu-container a");
+					for (var l = 0; l < links.length; l++) {
+						var addClass = links[l].getAttribute("title").split(" ");
+						for (var c = 0; c < addClass.length; c++) {
+							links[l].classList.add(addClass[c]);
+						}
+					}
+				}
+			</script>
 		</footer> <!-- /.site-footer.row -->
 
 	</div> <!-- /.footercontainer -->

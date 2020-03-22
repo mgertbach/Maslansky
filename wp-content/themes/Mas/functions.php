@@ -52,7 +52,9 @@ if ( ! function_exists( 'mas_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'mas' )
+				'primary' => esc_html__( 'Primary Menu', 'mas' ),
+				'secondary' => esc_html__( 'Secondary Menu', 'mas' ),
+				'social' => esc_html__( 'Social Menu', 'mas' )
 			) );
 
 		// This theme supports a variety of post formats
