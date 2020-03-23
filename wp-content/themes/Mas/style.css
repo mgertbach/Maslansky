@@ -1343,7 +1343,7 @@ article.sticky {
 .page-header {
 	margin-bottom: 32px;
 	margin-bottom: 2rem;
-	border-bottom: 1px solid #CCCCCC;
+	/* border-bottom: 1px solid #CCCCCC; */
 }
 
 .archive-meta {

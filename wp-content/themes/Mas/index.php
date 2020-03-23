@@ -22,46 +22,70 @@ get_header(); ?>
 			</div>
 			<div id="page-header_callout" class="row">
 				<div class="col grid_10_of_12">
-					<div class="row">
-						<p class="col grid_5_of_12 mas-graphik-light color-brand">Our take on the most, and least, effective communication</p>
-					</div>
-					<div class="row">
-						<img src="images/m+p_arrow_down.svg" />
-					</div>
+					<p class="mas-graphik-light color-brand">Our take on the most, and least,<br> effective communication</p>
+					<img src="../wp-content/themes/Mas/images/m+p_arrow_down.svg" />
 				</div>
 				<div class="col grid_2_of_12">
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" width="239" height="181" viewBox="0 0 239 181">
-					  <g id="Group_321" data-name="Group 321" transform="translate(-1441 -745)">
-					    <g id="Group_282" data-name="Group 282" transform="translate(-48 -39)">
-					      <rect id="Rectangle_246" data-name="Rectangle 246" width="239" height="93" rx="46.5" transform="translate(1489 838)" fill="#e4e4e5"/>
-					      <path id="Polygon_6" data-name="Polygon 6" d="M26,0,52,49H0Z" transform="translate(1652 965) rotate(180)" fill="#e4e4e5"/>
-					      <text id="_" data-name="…" transform="translate(1571 784)" fill="#bebec1" font-size="110" font-family="Helvetica" letter-spacing="-0.01em"><tspan x="0" y="85">…</tspan></text>
-					    </g>
-					  </g>
-					</svg> -->
+					<img src="../wp-content/themes/Mas/images/speech_bubble.svg" />
 				</div>
 			</div>
 		</div>
+		<div id="blog-page_nav" class="page-nav row">
+			<div id="blog-page_nav-title" class="col grid_3_of_12">
+				<h6 class="mas-graphik-light color-l1 type_sm">M+P Content Feed</h6>
+			</div>
+			<div id="blog-page_nav-categories" class="col grid_9_of_12">
+				<?php
+					// Get the current queried object
+					$term    = get_queried_object();
+					$term_id = ( isset( $term->term_id ) ) ? (int) $term->term_id : 0;
 
-		<div class="col grid_8_of_12">
+					$categories = get_categories( array(
+					    'taxonomy'   => 'category', // Taxonomy to retrieve terms for. We want 'category'. Note that this parameter is default to 'category', so you can omit it
+					    'orderby'    => 'name',
+					    'parent'     => 0,
+					    'hide_empty' => 0, // change to 1 to hide categores not having a single post
+					) );
+				?>
 
-			<?php if ( have_posts() ) : ?>
+				<ul id="blog-page_nav_categories_links">
+					<li class='active_cat'><a href='#'>All</a></li>
+			    <?php
+				    foreach ( $categories as $category ) {
+			        $cat_ID        = (int) $category->term_id;
+			        $category_name = $category->name;
 
-				<?php // Start the Loop ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content ?>
-				<?php endwhile; ?>
+			        // When viewing a particular category, give it an [active] class
+			        $cat_class = ( $cat_ID == $term_id ) ? 'active' : 'not-active';
 
-				<?php mas_content_nav( 'nav-below' ); ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
-
-			<?php endif; // end have_posts() check ?>
-
-		</div> <!-- /.col.grid_8_of_12 -->
-		<?php get_sidebar(); ?>
+			        // I don't like showing the [uncategoirzed] category
+			        if ( strtolower( $category_name ) != 'uncategorized' ) {
+			            // printf( '%3$s',
+			            //     esc_attr( $cat_class ),
+			            //     esc_url( get_category_link( $category->term_id ) ),
+			            //     esc_html( $category->name )
+			            // );
+									echo '<li><a href="'.esc_url( get_category_link( $category->term_id ) ).'">'.esc_html( $category->name ).'</a></li>';
+			        }
+				    }
+			    ?>
+				</ul>
+			</div>
+		</div>
+		<div class="col grid_12_of_12">
+			<?php
+			// if ( have_posts() ) :
+			// 	// Start the Loop
+			// 	while ( have_posts() ) : the_post();
+			// 		get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content
+			// 	endwhile;
+			// 	mas_content_nav( 'nav-below' );
+			// else :
+			// 	get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found
+			// endif; // end have_posts() check
+			
+			?>
+		</div>
 
 	</div> <!-- /#primary.site-content.row -->
 
