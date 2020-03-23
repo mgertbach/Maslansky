@@ -61,10 +61,17 @@ font-weight: normal;
 .mas-graphik-medium { font-family: "Graphik-Medium",sans-serif; }
 .mas-graphik-mediumitalic { font-family: "Graphik-MediumItalic",sans-serif; }
 
+.font-lighter {font-weight: lighter;}
+
 .type_xl {}
 .type_lg {}
-.type_md {}
+.type_md {font-size: 1.5rem;}
 .type_sm {font-size: 1.2rem;}
+.type_xs {font-size: 1rem;}
 
 .color-brand {color: #F47037;}
 .color-l1 {color: #C3C1C1;}
+.color-l2 {color: #848484;}
+.color-l3 {color: #455B71;}
+.color-dark {color: #292F34;}
+  .link-color-dark a {color: #292F34 !important;}
