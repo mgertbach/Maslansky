@@ -173,11 +173,32 @@ body.megamenu-freeze {
 
 
 
+/* BLOG PAGE LAYOUT STYLES */
+#blog-page-header {
+	background-color: #F5F5F5;
+	padding: calc(75px + 2.5rem) 5rem 2.5rem;
+	margin: 16px 0;
+}
+	#page-header_header {
+		margin-bottom: 2.5rem;
+	}
+		#page-header_header h1 {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+			#page-header_header h1:first-child {
+				font-size: 10vmin;
+			}
+			#page-header_header h1:last-child {
+				font-size: 15.8vmin;
+			}
+	#page-header_callout .col:first-child .row:first-child {
+		margin-bottom: 2.5rem;
+	}
 
 
-
-
-
+/* FOOTER STYLES */
 #footercontainer .site-footer:first-child {
   background-color: #F5F5F5;
   padding: 0 !important;
