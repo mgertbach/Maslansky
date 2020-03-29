@@ -14,28 +14,12 @@
 				<div class="row">
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php mas_posted_on();
-						if ( function_exists( 'coauthors' ) ) {
-							coauthors();
-							coauthors_posts_links();
-							coauthors_wp_list_authors();
-							coauthors()->avatar;
-						} else {
-							the_author();
-						}
-						// coauthors(the_ID());
-						// get_coauthors(the_ID());
-						// if (function_exists( 'coauthors_get_avatar')) {
-						// // 	coauthors_get_avatar();
-						// }
-						// if ( function_exists( 'coauthors_posts_links' ) ) {
-						//     coauthors_posts_links();
-						// } else {
-						//     the_author_posts_link();
-						// }
-						// if ( function_exists( 'coauthors_get_avatar' ) ) {
-						// 		// coauthors_get_avatar();
-						// }?>
+						<?php mas_posted_on();?>
+						<div id="blog-post_author">
+							<img id="blog-post_author-img" src="http://localhost:8888/maslansky/wp-content/uploads/2020/03/mp_Team-2.jpg"/>
+							<p id="blog-post_author-name" class="blog-post_author-text color-brand mas-graphik-light type_sm font-lighter">Lee Carter</p>
+							<p id="blog-post_author-info" class="blog-post_author-text color-l1 mas-graphik-light type_sm font-lighter">President<br>Maslansky+Partners</p>
+						</div>
 					</header> <!-- /.entry-header -->
 				</div>
 			</div>

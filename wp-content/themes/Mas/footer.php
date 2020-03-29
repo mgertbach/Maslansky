@@ -113,15 +113,15 @@
 			<?php //} ?>
 			<!-- run script to convert social links to icons -->
 			<script>
-				if (document.querySelectorAll(".menu-social-links-menu-container a")) {
-					var links = document.querySelectorAll(".menu-social-links-menu-container a");
-					for (var l = 0; l < links.length; l++) {
-						var addClass = links[l].getAttribute("title").split(" ");
-						for (var c = 0; c < addClass.length; c++) {
-							links[l].classList.add(addClass[c]);
-						}
-					}
-				}
+				// if (document.querySelectorAll(".menu-social-links-menu-container a")) {
+				// 	var links = document.querySelectorAll(".menu-social-links-menu-container a");
+				// 	for (var l = 0; l < links.length; l++) {
+				// 		var addClass = links[l].getAttribute("title").split(" ");
+				// 		for (var c = 0; c < addClass.length; c++) {
+				// 			links[l].classList.add(addClass[c]);
+				// 		}
+				// 	}
+				// }
 			</script>
 		</footer> <!-- /.site-footer.row -->
 
