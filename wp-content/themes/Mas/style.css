@@ -747,7 +747,7 @@ select {
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 2.5rem 5rem 0;
 	position: relative;
@@ -778,7 +778,7 @@ select {
 .banner {
 	color: #eaeaea;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 15px 0;
 	padding: 0.9375rem 0;
@@ -832,7 +832,7 @@ select {
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	color: #333;
 	line-height: 1.5;
@@ -841,7 +841,7 @@ select {
 
 .home-sidebar {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding-bottom: 32px;
 	padding-bottom: 2rem;
@@ -1606,7 +1606,7 @@ form label.error {
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 30px 5rem 0;
 	padding: 1.875rem 5rem 0;
@@ -1642,7 +1642,7 @@ form label.error {
 .smallprint {
 	color: #999;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
 }
 
 .smallprint p {
@@ -2250,7 +2250,7 @@ h1.page-title {
 .page-template-page-builderfullwidth.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
 .page-template-page-builderblank.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
 .page-template-page-builderboxed.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row {
-	max-width: 1200px;
+	max-width: 1400px;
 	width: 90%;
 }
 

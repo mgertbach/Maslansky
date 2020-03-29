@@ -43,7 +43,7 @@ body.megamenu-freeze {
 #site-navigation #nav-menu,
 #site-navigation #nav-secondary {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
@@ -188,10 +188,18 @@ body.megamenu-freeze {
 			line-height: 1;
 		}
 			#page-header_header h1:first-child {
-				font-size: 10vmin;
+				font-size: 6vw;
 			}
 			#page-header_header h1:last-child {
-				font-size: 15.8vmin;
+				font-size: 9.5vw;
+			}
+			@media screen and (min-width: 1700px) {
+				#page-header_header h1:first-child {
+					font-size: 4vw;
+				}
+				#page-header_header h1:last-child {
+					font-size: 6.35vw;
+				}
 			}
 	#page-header_callout p {
 		margin-bottom: 2.5rem;
@@ -227,6 +235,55 @@ body.megamenu-freeze {
 			#blog-page_nav-categories ul li:not(.active_cat) a {
 				color: #455B71;
 			}
+#blog-post-list {
+
+}
+	#blog-post-list .post_preview-wrapper {
+		width: calc((100% / 3) - calc(4rem / 3));
+	}
+	#blog-post-list .post_preview-wrapper {
+		margin: 30px 0;
+	}
+	#blog-post-list .post_preview-wrapper:nth-child(3n+2) {
+		margin: 30px 2rem;
+	}
+	#blog-post-list .blog-post_default {
+		background-color: #F5F5F5;
+		width: 100%;
+		padding-bottom: calc(100% - 8px);
+		height: 0;
+		position: relative;
+	}
+		#blog-post-list .blog-post_default p.blog-post_cat,
+		#blog-post-list .blog-post_default h6.blog-post_title {
+			padding: 3rem;
+			margin: 0;
+		}
+		#blog-post-list .blog-post_default h6.blog-post_title {
+			font-size: 2.5vw;
+			position: absolute;
+			bottom: 0;
+		}
+	#blog-post-list .blog-post_author {
+		color: #292F34;
+		font-family: "Graphik-Medium",sans-serif;
+		font-weight: 600;
+		margin-top: 30px;
+		display: block;
+	}
+		#blog-post-list .blog-post_author .author {
+			color: #292F34;
+			text-decoration: none;
+		}
+	#blog-post-list p {
+		margin: 30px 0;
+	}
+		#blog-post-list .more-link {
+			color: #F15D12;
+	    font-family: "Graphik-Medium",sans-serif;
+	    border-bottom: 3px solid rgb(241,93,18,.3);
+	    padding-bottom: .5rem;
+		}
 
 /* BLOG POST PAGE LAYOUT STYLES */
 body.post-template-default #headercontainer {
@@ -305,7 +362,7 @@ article.post .post-share {
 }
 #footercontainer .site-footer:first-child .footer-row {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 5rem;
 }

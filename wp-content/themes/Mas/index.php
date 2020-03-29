@@ -13,7 +13,6 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="site-content row" role="main">
 		<div id="blog-page-header" class="page-header row">
 			<div id="page-header_header" class="row">
@@ -58,13 +57,8 @@ get_header(); ?>
 			        // When viewing a particular category, give it an [active] class
 			        $cat_class = ( $cat_ID == $term_id ) ? 'active' : 'not-active';
 
-			        // I don't like showing the [uncategoirzed] category
+			        // create link for all categories EXCEPT "uncategorized"
 			        if ( strtolower( $category_name ) != 'uncategorized' ) {
-			            // printf( '%3$s',
-			            //     esc_attr( $cat_class ),
-			            //     esc_url( get_category_link( $category->term_id ) ),
-			            //     esc_html( $category->name )
-			            // );
 									echo '<li><a href="'.esc_url( get_category_link( $category->term_id ) ).'">'.esc_html( $category->name ).'</a></li>';
 			        }
 				    }
@@ -72,18 +66,20 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div class="col grid_12_of_12">
+		<div id="blog-post-list">
 			<?php
-			// if ( have_posts() ) :
-			// 	// Start the Loop
-			// 	while ( have_posts() ) : the_post();
-			// 		get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content
-			// 	endwhile;
-			// 	mas_content_nav( 'nav-below' );
-			// else :
-			// 	get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found
-			// endif; // end have_posts() check
-			
+			if ( have_posts() ) :
+				// Start the Loop
+				while ( have_posts() ) : the_post();
+					echo "<div class='col grid_4_of_12 post_preview-wrapper'>";
+					get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content
+					echo "</div>";
+				endwhile;
+				mas_content_nav( 'nav-below' );
+			else :
+				get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found
+			endif; // end have_posts() check
+
 			?>
 		</div>
 
