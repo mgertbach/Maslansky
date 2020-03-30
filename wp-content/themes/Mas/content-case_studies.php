@@ -9,20 +9,13 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php if ( is_single() ) { ?>
-			<!-- display header & post info sidebar if it is a single post page -->
-			<div class="col grid_5_of_12" id="post-sidebar">
-				<div class="row">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php mas_posted_on();?>
-						<div id="blog-post_author">
-							<img id="blog-post_author-img" src="http://localhost:8888/maslansky/wp-content/uploads/2020/03/mp_Team-2.jpg"/>
-							<p id="blog-post_author-name" class="blog-post_author-text color-brand mas-graphik-light type_sm font-lighter">Lee Carter</p>
-							<p id="blog-post_author-info" class="blog-post_author-text color-l1 mas-graphik-light type_sm font-lighter">President<br>Maslansky+Partners</p>
-						</div>
-					</header> <!-- /.entry-header -->
-				</div>
-			</div>
+				<h1>TEST</h1>
+			<!-- header img -->
+			<?php
+			if (class_exists('MultiPostThumbnails')) :
+			MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image');
+			endif;
+			?>
 			<!-- display post content in main page section -->
 			<div class="col grid_7_of_12" id="post-content">
 				<div class="row">
@@ -60,13 +53,7 @@
 				<h6 class="blog-post_title tk-acumin-pro-extra-condensed color-l4"><?php the_title(); ?></h6>
 			</div>
 		<?php } ?>
-		<span class='blog-post_author type_sm'>By
-		<?php	if ( function_exists( 'coauthors_posts_links' ) ) {
-					coauthors_posts_links();
-			} else {
-					the_author_posts_link();
-			} ?>
-		</span>
+		<h1 class="post-title mas-graphik-light type_md color-l1 font-lighter"><?php the_title(); ?></h1>
 		<span class="post-excerpt mas-graphik-light font-lighter color-l2"><?php	the_excerpt(); ?></span>
 			<p><a class="more-link" href="<?php the_permalink(); ?>"><?php echo wp_kses( __( 'Read More', 'mas' ), array( 'span' => array(
 				'class' => array() ) ) ) ?>
@@ -76,4 +63,4 @@
 		 ?>
 
 
-		</article> <!-- /#post -->
+	 </article> <!-- /#post -->

@@ -30,10 +30,10 @@ get_header(); ?>
 			</div>
 		</div>
 		<div id="blog-page_nav" class="page-nav row">
-			<div id="blog-page_nav-title" class="col grid_3_of_12">
+			<div id="blog-page_nav-title" class="page-nav_title col grid_3_of_12">
 				<h6 class="mas-graphik-light color-l1 type_sm">M+P Content Feed</h6>
 			</div>
-			<div id="blog-page_nav-categories" class="col grid_9_of_12">
+			<div id="blog-page_nav-categories" class="page-nav_categories col grid_9_of_12">
 				<?php
 					// Get the current queried object
 					$term    = get_queried_object();
@@ -66,7 +66,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
-		<div id="blog-post-list">
+		<div id="blog-post-list" class="post-list">
 			<?php
 			if ( have_posts() ) :
 				// Start the Loop
