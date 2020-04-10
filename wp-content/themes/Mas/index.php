@@ -72,7 +72,39 @@ get_header(); ?>
 				// Start the Loop
 				while ( have_posts() ) : the_post();
 					echo "<div class='col grid_4_of_12 post_preview-wrapper'>";
-					get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content
+					// get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content
+					?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<?php if ( has_excerpt() && !is_single() ) {
+								if (has_post_thumbnail()) {
+									//display feature image
+									the_post_thumbnail();
+								} else {
+									//create default tile / cat display
+								?>
+								<div class='blog-post_default'>
+									<p class='blog-post_cat mas-graphik-light color-l3'>
+										<?php foreach((get_the_category()) as $category) {
+										    echo $category->cat_name . ' ';
+										} ?>
+									</p>
+									<h6 class="blog-post_title tk-acumin-pro-extra-condensed color-l4"><?php the_title(); ?></h6>
+								</div>
+							<?php } ?>
+							<span class='blog-post_author type_sm'>By
+							<?php	if ( function_exists( 'coauthors_posts_links' ) ) {
+										coauthors_posts_links();
+								} else {
+										the_author_posts_link();
+								} ?>
+							</span>
+							<span class="post-excerpt mas-graphik-light font-lighter color-l2"><?php	the_excerpt(); ?></span>
+								<p><a class="more-link" href="<?php the_permalink(); ?>"><?php echo wp_kses( __( 'Read More', 'mas' ), array( 'span' => array(
+									'class' => array() ) ) ) ?>
+								</a></p>
+							<?php } ?>
+							</article> <!-- /#post -->
+					<?php
 					echo "</div>";
 				endwhile;
 				mas_content_nav( 'nav-below' );
