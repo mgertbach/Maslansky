@@ -1,0 +1,93 @@
+/*homepage mega-textblock font sizing*/
+.mega-textblock p {
+	/* font-size:1.2rem; */
+}
+.mega-textblock p, .mega-calloutblock p, .mega-tileblocks p {
+	/* font-size:1.2rem; */
+}
+.mega-textblock h1.line-one {
+	font-size: 8.4vw;
+}
+.mega-textblock h1.line-two {
+	font-size: 8.7vw;
+}
+.mega-textblock h1.line-three {
+	font-size: 7.6vw;
+}
+.mega-calloutblock h1.line-one {
+	font-size: 10vw;
+}
+.mega-calloutblock h1.line-two {
+	font-size: 14.5vw;
+}
+
+
+@media screen and (min-width: 1333px) {
+  .mega-textblock h1.line-one {
+  	font-size: 7.2rem;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 7.45rem;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 6.5rem;
+  }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1042px) {
+  .mega-textblock h1.line-one {
+  	font-size: 8.3vw;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 8.6vw;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 7.5vw;
+  }
+}
+
+@media screen and (min-width: 874px) and (max-width: 950px) {
+  .mega-textblock h1.line-one {
+  	font-size: 8.2vw;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 8.5vw;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 7.4vw;
+  }
+}
+
+@media screen and (min-width: 812px) and (max-width: 873px) {
+  .mega-textblock h1.line-one {
+  	font-size: 8.1vw;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 8.4vw;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 7.3vw;
+  }
+}
+@media screen and (min-width: 762px) and (max-width: 811px) {
+  .mega-textblock h1.line-one {
+  	font-size: 8vw;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 8.3vw;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 7.2vw;
+  }
+}
+@media screen and (min-width: 762px) and (max-width: 761px) {
+  .mega-textblock h1.line-one {
+  	font-size: 7.9vw;
+  }
+  .mega-textblock h1.line-two {
+  	font-size: 8.2vw;
+  }
+  .mega-textblock h1.line-three {
+  	font-size: 7.1vw;
+  }
+}
